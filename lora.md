@@ -24,8 +24,8 @@ accelerate launch --mixed_precision="fp16" train_text_to_image_lora.py \
   
   将lora模型转化成WebUI支持格式并拷贝到WebUI所在目录。
   ```
- wget -c http://pai-vision-data-hz.oss-cn-zhangjiakou.aliyuncs.com/EasyCV/datasets/convert-to-safetensors.py
- python convert-to-safetensors.py --file='cloth-model-lora/pytorch_lora_weights.bin'
+
+ python lora-diffusers-diffusion-convert-to-safetensors.py --file='cloth-model-lora/pytorch_lora_weights.bin'
  mkdir stable-diffusion-webui/models/Lora
  cp cloth-model-lora/pytorch_lora_weights_converted.safetensors stable-diffusion-webui/models/Lora/cloth_lora_weights.safetensors
   ```
@@ -34,5 +34,6 @@ accelerate launch --mixed_precision="fp16" train_text_to_image_lora.py \
   
   ![image](https://user-images.githubusercontent.com/7675726/234150494-ecca695a-380c-44b8-bbb0-f5035544f217.png)
 ```
-cp cloth-model-lora/pytorch_lora_weights_converted.safetensors stable-diffusion-webui/extensions/sd-webui-additional-networks/models/lora
+cp cloth-model-lora/pytorch_lora_weights_converted.safetensors \
+stable-diffusion-webui/extensions/sd-webui-additional-networks/models/lora
 ```
