@@ -6,8 +6,10 @@
 --checkpoint_path=stable-diffusion-webui/models/Stable-diffusion/chilloutmix_NiPrunedFp32Fix.safetensors \
 --dump_path=chilloutmix-ni --from_safetensors
 ```
-模型训练。设置num_train_epochs为200，进行lora模型的训练。MODEL_NAME 修改为你本地路径即可，`export MODEL_NAME="/path/../model/chilloutmix-ni"`
-或者与scripts同一目录`export MODEL_NAME="chilloutmix-ni"`
+模型训练。设置num_train_epochs为200，进行lora模型的训练。MODEL_NAME 修改为你本地路径即可，
+
+`export MODEL_NAME="/path/../model/chilloutmix-ni"`
+或者与scripts脚本同一目录`export MODEL_NAME="chilloutmix-ni"`
 
 ```
 export MODEL_NAME="chilloutmix-ni" && \
