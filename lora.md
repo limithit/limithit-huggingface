@@ -1,5 +1,6 @@
 下载预训练模型并转化成diffusers格式。
 ```
+ pip install safetensors
  cd stable-diffusion-webui/models/Stable-diffusion && wget -c https://huggingface.co/naonovn/chilloutmix_NiPrunedFp32Fix/resolve/main/chilloutmix_NiPrunedFp32Fix.safetensors -O chilloutmix_NiPrunedFp32Fix.safetensors
  python diffusers/scripts/convert_original_stable_diffusion_to_diffusers.py \
 --checkpoint_path=stable-diffusion-webui/models/Stable-diffusion/chilloutmix_NiPrunedFp32Fix.safetensors \
