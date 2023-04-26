@@ -1,3 +1,3 @@
 # 参数说明
 `--class_data_dir`   A folder containing the training data of class images.
-这个AI会自动生成，也可以上传真实的图片，需要加参数 `--real_prior` 即可,代表使用真实照片不需要自动生成。
+这个会自动生成，也可以上传真实的图片，但需要加参数 `--real_prior` 代表使用真实照片不需要自动生成。
