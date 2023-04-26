@@ -1,3 +1,7 @@
 # 参数说明
 `--class_data_dir`   A folder containing the training data of class images.
 这个会自动生成，也可以上传真实的图片，但需要加参数 `--real_prior` 代表使用真实照片不需要自动生成。
+`--resolution=512`  sd 1.5 1.4模型使用 如须768 需要stable-diffusion-2 768x768 model.
+`--pretrained_model_name_or_path` 训练使用的基础模型可以是huggingface的地址，也可以是本地地址
+`--instance_data_dir` 待训练的图片
+`--num_class_images`   `--class_data_dir`目录的图片数量
