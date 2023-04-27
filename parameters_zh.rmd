@@ -1,7 +1,11 @@
 # 参数说明
-`--class_data_dir`   A folder containing the training data of class images.
+`--pretrained_model_name_or_path` 训练使用的基础模型可以是huggingface的路径，也可以是本地路径
+`--instance_data_dir` 待训练的图片
+`--instance_prompt` 带有特定实例（物体）的提示词描述文本，例如『a photo of sks dog』，其中dog代表实例（物体）。
+`--class_data_dir`  一个包含类图像训练数据的文件夹。
+`--class_prompt` 类别（class）提示词文本，该提示器要与实例（物体）是同一种类别，例如『a photo of dog』，主要作为先验知识
 这个会自动生成，也可以上传真实的图片，但需要加参数 `--real_prior` 代表使用真实照片不需要自动生成。
 `--resolution=512`  sd 1.5 1.4模型使用 如须768 需要stable-diffusion-2 768x768 model.
-`--pretrained_model_name_or_path` 训练使用的基础模型可以是huggingface的地址，也可以是本地地址
-`--instance_data_dir` 待训练的图片
 `--num_class_images`   `--class_data_dir`目录的图片数量
+`--with_prior_preservation`  是否将生成的同类图片（先验知识）一同加入训练，当为True的时候，
+    class_prompt、class_data_dir、num_class_images、sample_batch_size和prior_loss_weight才生效。
