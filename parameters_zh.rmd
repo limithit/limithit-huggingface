@@ -5,7 +5,8 @@
 `--class_data_dir`  一个包含类图像训练数据的文件夹。
 `--class_prompt` 类别（class）提示词文本，该提示器要与实例（物体）是同一种类别，例如『a photo of dog』，主要作为先验知识
 这个会自动生成，也可以上传真实的图片，但需要加参数 `--real_prior` 代表使用真实照片不需要自动生成。
-`--resolution=512`  sd 1.5 1.4模型使用 如须768 需要stable-diffusion-2 768x768 model.
+`--resolution=512`  sd 1.5 1.4模型使用 如须768 需要stable-diffusion-2 768x768 model. 因为stable-diffusion-2自动生成的class图片是偏离实际的，
+所以不建议使用2,除非你自己准备class图片，否则不要用，比如你训练的图都是手办，但是class自动生成居然不是手办相关，再比如你训练的是猫，class目录生成的是猫以外的，正确情况它应该还是生成与猫相关的才叫做类。
 `--num_class_images`   `--class_data_dir`目录的图片数量
 `--with_prior_preservation`  是否将生成的同类图片（先验知识）一同加入训练，当为True的时候，
     class_prompt、class_data_dir、num_class_images、sample_batch_size和prior_loss_weight才生效。
