@@ -11,3 +11,6 @@
 `--num_class_images`   `--class_data_dir`目录的图片数量
 `--with_prior_preservation`  是否将生成的同类图片（先验知识）一同加入训练，当为True的时候，
     class_prompt、class_data_dir、num_class_images、sample_batch_size和prior_loss_weight才生效。
+
+
+# 经验总结 ，dreambooth训练效果不好时，可尝试lora模型训练，加权重效果有时很好
