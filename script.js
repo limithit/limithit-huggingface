@@ -8,10 +8,10 @@ let dragging = false;
 
 // Resize the canvas to fill the parent element
 function resizeCanvas() {
-//   canvas.width = window.innerWidth;
-//   canvas.height = window.innerHeight;
-  canvas.width = 1024;
-  canvas.height = 1024;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+//   canvas.width = 1024;
+//   canvas.height = 1024;
   drawImage();
 }
 
