@@ -5,7 +5,13 @@ The LoRA trained using Diffusers are saved in .bin or .pkl format, which must be
 
 This script converts .bin or .pkl files into .safetensors format, which can be used in WebUI.
 
-Put this file in the same folder of .bin or .pkl file and run `python convert-to-safetensors.py --file checkpoint_file`
+Put this file in the same folder of .bin or .pkl file and run `python convert-to-safetensors.py --file checkpoint_file`  for diffusers <=v0.15.0
+edit train_dreambooth_lora.py
+ 530 def main(args):
+ 531     logging_dir = Path(args.output_dir, args.logging_dir)
+ 532 
+ 533     accelerator_project_config = ProjectConfiguration(project_dir=args.output_dir, logging_dir=logging_dir)
+
 
 """
 import re
