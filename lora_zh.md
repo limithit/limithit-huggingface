@@ -10,7 +10,7 @@
 
 `export MODEL_NAME="/path/../model/chilloutmix-ni"`
 或者与scripts脚本同一目录`export MODEL_NAME="chilloutmix-ni"`
-
+`dataset_name图片和jsonl  必须在train目录下 /path/train/*.jpg   /path/train/metadata.jsonl`
 ```
 export MODEL_NAME="chilloutmix-ni" && \
 export DATASET_NAME="cloth_train_example" && \
